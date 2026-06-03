@@ -1,12 +1,12 @@
 import { useState } from "react";
 import api from "../services/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate(); // 👈 ADD THIS
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -15,13 +15,9 @@ function Login() {
         password,
       });
 
-      console.log(res.data);
-
       localStorage.setItem("token", res.data.token);
 
-      alert("Login successful");
-
-      navigate("/dashboard"); // 👈 REDIRECT TO DASHBOARD
+      navigate("/dashboard");
     } catch (err) {
       console.log(err.response?.data || err.message);
       alert("Login failed");
@@ -50,9 +46,12 @@ function Login() {
 
       <br /><br />
 
-      <button onClick={handleLogin}>
-        Login
-      </button>
+      <button onClick={handleLogin}>Login</button>
+
+      <p>
+        Don't have an account?{" "}
+        <Link to="/register">Register</Link>
+      </p>
     </div>
   );
 }
