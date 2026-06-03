@@ -1,3 +1,35 @@
+# Task Manager Frontend
+
+This is the frontend for the Task Manager app built using React (Vite).
+
+## Features
+- Login & Register
+- Task Dashboard
+- Create, Edit, Delete Tasks
+- Search & Filter
+- Responsive UI
+
+## Tech Stack
+- React (Vite)
+- Axios
+- React Router
+
+## Setup
+
+### Install dependencies
+npm install
+
+### Run project
+npm run dev
+
+## API Connection
+
+Backend API:
+https://trade-ethiopia-task-manager-backend-7ntp.onrender.com/api
+
+## Deployment
+Frontend deployed on Vercel
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
